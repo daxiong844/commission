@@ -1,0 +1,1484 @@
+{
+  "version": "3.4",
+  "log": [
+    {
+      "@openzeppelin/contracts/proxy/utils/Initializable.sol:Initializable": {
+        "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:58",
+        "inherit": [],
+        "libraries": [
+          "@openzeppelin/contracts/utils/Address.sol:Address"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:68"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "@openzeppelin/contracts/token/ERC20/IERC20.sol:IERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "@openzeppelin/contracts/utils/Address.sol:Address": {
+        "src": "@openzeppelin/contracts/utils/Address.sol:9",
+        "version": {
+          "withMetadata": "930fd9952b1160d73a380c2a40540ff1ad627d699ebe04b95827f0eb6b9f45ae",
+          "withoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312",
+          "linkedWithoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:185"
+          },
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:185"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "contracts/BatchCommission.sol:BatchCommission": {
+        "src": "contracts/BatchCommission.sol:8",
+        "version": {
+          "withMetadata": "9e0bba7179529728c75105faf5bdd1042c78c414dbc5066c8609f22651db5248",
+          "withoutMetadata": "c71a0964f17601af0306d392d7d5e64aaf554268f3f66447129ffba4192c49a0",
+          "linkedWithoutMetadata": "c71a0964f17601af0306d392d7d5e64aaf554268f3f66447129ffba4192c49a0"
+        },
+        "inherit": [
+          "@openzeppelin/contracts/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "initialize(address)",
+          "depositCommission(bytes,struct BatchCommission.CommissionInfo[])",
+          "distributeCommission(address,bytes)",
+          "destroyAndReturnCommission(bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:68"
+            },
+            {
+              "label": "commissionStorage",
+              "offset": 2,
+              "slot": "0",
+              "type": "t_contract(ICommissionStorag)1585",
+              "contract": "BatchCommission",
+              "src": "contracts/BatchCommission.sol:11"
+            },
+            {
+              "label": "userCommissionInfo",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_address,t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)600_storage)dyn_storage))",
+              "contract": "BatchCommission",
+              "src": "contracts/BatchCommission.sol:21"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_struct(CommissionInfo)600_storage)dyn_storage": {
+              "label": "struct BatchCommission.CommissionInfo[]",
+              "numberOfBytes": "32"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes_memory_ptr": {
+              "label": "bytes",
+              "numberOfBytes": "32"
+            },
+            "t_contract(ICommissionStorag)1585": {
+              "label": "contract ICommissionStorag",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)600_storage)dyn_storage))": {
+              "label": "mapping(address => mapping(bytes => struct BatchCommission.CommissionInfo[]))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)600_storage)dyn_storage)": {
+              "label": "mapping(bytes => struct BatchCommission.CommissionInfo[])",
+              "numberOfBytes": "32"
+            },
+            "t_struct(CommissionInfo)600_storage": {
+              "label": "struct BatchCommission.CommissionInfo",
+              "members": [
+                {
+                  "label": "user",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "token",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "balance",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            },
+            "t_bytes_storage": {
+              "label": "bytes"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "contracts/BatchCommissionV2.sol:BatchCommissionV2": {
+        "src": "contracts/BatchCommissionV2.sol:8",
+        "version": {
+          "withMetadata": "9369ef955891a2ee12390015030e3b7d445bd8d1998f453c755da974bc5be9c6",
+          "withoutMetadata": "c71a0964f17601af0306d392d7d5e64aaf554268f3f66447129ffba4192c49a0",
+          "linkedWithoutMetadata": "c71a0964f17601af0306d392d7d5e64aaf554268f3f66447129ffba4192c49a0"
+        },
+        "inherit": [
+          "@openzeppelin/contracts/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "initialize(address)",
+          "depositCommission(bytes,struct BatchCommissionV2.CommissionInfo[])",
+          "distributeCommission(address,bytes)",
+          "destroyAndReturnCommission(bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:68"
+            },
+            {
+              "label": "commissionStorage",
+              "offset": 2,
+              "slot": "0",
+              "type": "t_contract(ICommissionStorag)1585",
+              "contract": "BatchCommissionV2",
+              "src": "contracts/BatchCommissionV2.sol:11"
+            },
+            {
+              "label": "userCommissionInfo",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_address,t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)1073_storage)dyn_storage))",
+              "contract": "BatchCommissionV2",
+              "src": "contracts/BatchCommissionV2.sol:21"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_struct(CommissionInfo)1073_storage)dyn_storage": {
+              "label": "struct BatchCommissionV2.CommissionInfo[]",
+              "numberOfBytes": "32"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes_memory_ptr": {
+              "label": "bytes",
+              "numberOfBytes": "32"
+            },
+            "t_contract(ICommissionStorag)1585": {
+              "label": "contract ICommissionStorag",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)1073_storage)dyn_storage))": {
+              "label": "mapping(address => mapping(bytes => struct BatchCommissionV2.CommissionInfo[]))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)1073_storage)dyn_storage)": {
+              "label": "mapping(bytes => struct BatchCommissionV2.CommissionInfo[])",
+              "numberOfBytes": "32"
+            },
+            "t_struct(CommissionInfo)1073_storage": {
+              "label": "struct BatchCommissionV2.CommissionInfo",
+              "members": [
+                {
+                  "label": "user",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "token",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "balance",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            },
+            "t_bytes_storage": {
+              "label": "bytes"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "contracts/ICommissionStorag.sol:ICommissionStorag": {
+        "src": "contracts/ICommissionStorag.sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "updateBalance(address,address,uint256)",
+          "getTokenBalances(address)",
+          "hasToken(address,address)",
+          "withdrawEth(uint256)",
+          "withdrawToken(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      }
+    },
+    {
+      "@openzeppelin/contracts/proxy/utils/Initializable.sol:Initializable": {
+        "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:58",
+        "inherit": [],
+        "libraries": [
+          "@openzeppelin/contracts/utils/Address.sol:Address"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:68"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "@openzeppelin/contracts/token/ERC20/IERC20.sol:IERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "@openzeppelin/contracts/utils/Address.sol:Address": {
+        "src": "@openzeppelin/contracts/utils/Address.sol:9",
+        "version": {
+          "withMetadata": "930fd9952b1160d73a380c2a40540ff1ad627d699ebe04b95827f0eb6b9f45ae",
+          "withoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312",
+          "linkedWithoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:185"
+          },
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:185"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "contracts/BatchCommission.sol:BatchCommission": {
+        "src": "contracts/BatchCommission.sol:9",
+        "version": {
+          "withMetadata": "94d30cb02abf0f5eae7b5898ab336a6f82d2e1e806883de93395f2ad3e69326e",
+          "withoutMetadata": "c71a0964f17601af0306d392d7d5e64aaf554268f3f66447129ffba4192c49a0",
+          "linkedWithoutMetadata": "c71a0964f17601af0306d392d7d5e64aaf554268f3f66447129ffba4192c49a0"
+        },
+        "inherit": [
+          "@openzeppelin/contracts/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "initialize(address)",
+          "depositCommission(bytes,struct BatchCommission.CommissionInfo[])",
+          "distributeCommission(address,bytes)",
+          "destroyAndReturnCommission(bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:68"
+            },
+            {
+              "label": "commissionStorage",
+              "offset": 2,
+              "slot": "0",
+              "type": "t_contract(ICommissionStorag)1112",
+              "contract": "BatchCommission",
+              "src": "contracts/BatchCommission.sol:12"
+            },
+            {
+              "label": "userCommissionInfo",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_address,t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)600_storage)dyn_storage))",
+              "contract": "BatchCommission",
+              "src": "contracts/BatchCommission.sol:22"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_struct(CommissionInfo)600_storage)dyn_storage": {
+              "label": "struct BatchCommission.CommissionInfo[]",
+              "numberOfBytes": "32"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes_memory_ptr": {
+              "label": "bytes",
+              "numberOfBytes": "32"
+            },
+            "t_contract(ICommissionStorag)1112": {
+              "label": "contract ICommissionStorag",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)600_storage)dyn_storage))": {
+              "label": "mapping(address => mapping(bytes => struct BatchCommission.CommissionInfo[]))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)600_storage)dyn_storage)": {
+              "label": "mapping(bytes => struct BatchCommission.CommissionInfo[])",
+              "numberOfBytes": "32"
+            },
+            "t_struct(CommissionInfo)600_storage": {
+              "label": "struct BatchCommission.CommissionInfo",
+              "members": [
+                {
+                  "label": "user",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "token",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "balance",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            },
+            "t_bytes_storage": {
+              "label": "bytes"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "contracts/ICommissionStorag.sol:ICommissionStorag": {
+        "src": "contracts/ICommissionStorag.sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "updateBalance(address,address,uint256)",
+          "getTokenBalances(address)",
+          "hasToken(address,address)",
+          "withdrawEth(uint256)",
+          "withdrawToken(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      }
+    },
+    {
+      "@openzeppelin/contracts/token/ERC20/IERC20.sol:IERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "contracts/BatchCommission.sol:BatchCommission": {
+        "src": "contracts/BatchCommission.sol:9",
+        "version": {
+          "withMetadata": "3b54e9b8f980d96d6a8ab0024004387e89467845bd2b3eb22960415d8c5723ed",
+          "withoutMetadata": "b069add598f72646734769f03e66858849d63b64301a6d2416504ed19d81f484",
+          "linkedWithoutMetadata": "b069add598f72646734769f03e66858849d63b64301a6d2416504ed19d81f484"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "(address)",
+          "depositCommission(bytes,struct BatchCommission.CommissionInfo[])",
+          "distributeCommission(address,bytes)",
+          "destroyAndReturnCommission(bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "BatchCommission",
+            "src": "contracts/BatchCommission.sol:30"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "commissionStorage",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_contract(ICommissionStorag)608",
+              "contract": "BatchCommission",
+              "src": "contracts/BatchCommission.sol:12"
+            },
+            {
+              "label": "userCommissionInfo",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_address,t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)98_storage)dyn_storage))",
+              "contract": "BatchCommission",
+              "src": "contracts/BatchCommission.sol:22"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_struct(CommissionInfo)98_storage)dyn_storage": {
+              "label": "struct BatchCommission.CommissionInfo[]",
+              "numberOfBytes": "32"
+            },
+            "t_bytes_memory_ptr": {
+              "label": "bytes",
+              "numberOfBytes": "32"
+            },
+            "t_contract(ICommissionStorag)608": {
+              "label": "contract ICommissionStorag",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)98_storage)dyn_storage))": {
+              "label": "mapping(address => mapping(bytes => struct BatchCommission.CommissionInfo[]))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)98_storage)dyn_storage)": {
+              "label": "mapping(bytes => struct BatchCommission.CommissionInfo[])",
+              "numberOfBytes": "32"
+            },
+            "t_struct(CommissionInfo)98_storage": {
+              "label": "struct BatchCommission.CommissionInfo",
+              "members": [
+                {
+                  "label": "user",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "token",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "balance",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_bytes_storage": {
+              "label": "bytes"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "contracts/ICommissionStorag.sol:ICommissionStorag": {
+        "src": "contracts/ICommissionStorag.sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "updateBalance(address,address,uint256)",
+          "getTokenBalances(address)",
+          "hasToken(address,address)",
+          "withdrawEth(uint256)",
+          "withdrawToken(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      }
+    },
+    {
+      "@openzeppelin/contracts/proxy/utils/Initializable.sol:Initializable": {
+        "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:58",
+        "inherit": [],
+        "libraries": [
+          "@openzeppelin/contracts/utils/Address.sol:Address"
+        ],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:68"
+            }
+          ],
+          "types": {
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "@openzeppelin/contracts/token/ERC20/ERC20.sol:ERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:38",
+        "version": {
+          "withMetadata": "21df53f458688ed4300e91234891f6996f6c6e284dafc7c38f1f90c75f151d58",
+          "withoutMetadata": "c7858cf9550763fe7262aa37205ce5c94bda65ebce276115d85a78b877c93992",
+          "linkedWithoutMetadata": "c7858cf9550763fe7262aa37205ce5c94bda65ebce276115d85a78b877c93992"
+        },
+        "inherit": [
+          "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol:IERC20Metadata",
+          "@openzeppelin/contracts/token/ERC20/IERC20.sol:IERC20",
+          "@openzeppelin/contracts/utils/Context.sol:Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "(string,string)",
+          "name()",
+          "symbol()",
+          "decimals()",
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)",
+          "increaseAllowance(address,uint256)",
+          "decreaseAllowance(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20",
+            "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:54"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:41"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_uint256",
+              "contract": "ERC20",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:43"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_string_storage",
+              "contract": "ERC20",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:45"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_string_storage",
+              "contract": "ERC20",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:46"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "@openzeppelin/contracts/token/ERC20/IERC20.sol:IERC20": {
+        "src": "@openzeppelin/contracts/token/ERC20/IERC20.sol:9",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "totalSupply()",
+          "balanceOf(address)",
+          "transfer(address,uint256)",
+          "allowance(address,address)",
+          "approve(address,uint256)",
+          "transferFrom(address,address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol:IERC20Metadata": {
+        "src": "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol:13",
+        "inherit": [
+          "@openzeppelin/contracts/token/ERC20/IERC20.sol:IERC20"
+        ],
+        "libraries": [],
+        "methods": [
+          "name()",
+          "symbol()",
+          "decimals()"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "@openzeppelin/contracts/utils/Address.sol:Address": {
+        "src": "@openzeppelin/contracts/utils/Address.sol:9",
+        "version": {
+          "withMetadata": "930fd9952b1160d73a380c2a40540ff1ad627d699ebe04b95827f0eb6b9f45ae",
+          "withoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312",
+          "linkedWithoutMetadata": "aef8899eac78fba7080b09fc141bbd85fea7f379041e693bd8f5e5e8ddf44312"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:185"
+          },
+          {
+            "kind": "delegatecall",
+            "src": "@openzeppelin/contracts/utils/Address.sol:185"
+          }
+        ],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "@openzeppelin/contracts/utils/Context.sol:Context": {
+        "src": "@openzeppelin/contracts/utils/Context.sol:16",
+        "inherit": [],
+        "libraries": [],
+        "methods": [],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "contracts/BatchCommission.sol:BatchCommission": {
+        "src": "contracts/BatchCommission.sol:8",
+        "version": {
+          "withMetadata": "9e0bba7179529728c75105faf5bdd1042c78c414dbc5066c8609f22651db5248",
+          "withoutMetadata": "c71a0964f17601af0306d392d7d5e64aaf554268f3f66447129ffba4192c49a0",
+          "linkedWithoutMetadata": "c71a0964f17601af0306d392d7d5e64aaf554268f3f66447129ffba4192c49a0"
+        },
+        "inherit": [
+          "@openzeppelin/contracts/proxy/utils/Initializable.sol:Initializable"
+        ],
+        "libraries": [],
+        "methods": [
+          "initialize(address)",
+          "depositCommission(bytes,struct BatchCommission.CommissionInfo[])",
+          "distributeCommission(address,bytes)",
+          "destroyAndReturnCommission(bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "_initialized",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_uint8",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:63",
+              "retypedFrom": "bool"
+            },
+            {
+              "label": "_initializing",
+              "offset": 1,
+              "slot": "0",
+              "type": "t_bool",
+              "contract": "Initializable",
+              "src": "@openzeppelin/contracts/proxy/utils/Initializable.sol:68"
+            },
+            {
+              "label": "commissionStorage",
+              "offset": 2,
+              "slot": "0",
+              "type": "t_contract(ICommissionStorag)2444",
+              "contract": "BatchCommission",
+              "src": "contracts/BatchCommission.sol:11"
+            },
+            {
+              "label": "userCommissionInfo",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_address,t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)1234_storage)dyn_storage))",
+              "contract": "BatchCommission",
+              "src": "contracts/BatchCommission.sol:21"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_struct(CommissionInfo)1234_storage)dyn_storage": {
+              "label": "struct BatchCommission.CommissionInfo[]",
+              "numberOfBytes": "32"
+            },
+            "t_bool": {
+              "label": "bool",
+              "numberOfBytes": "1"
+            },
+            "t_bytes_memory_ptr": {
+              "label": "bytes",
+              "numberOfBytes": "32"
+            },
+            "t_contract(ICommissionStorag)2444": {
+              "label": "contract ICommissionStorag",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)1234_storage)dyn_storage))": {
+              "label": "mapping(address => mapping(bytes => struct BatchCommission.CommissionInfo[]))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)1234_storage)dyn_storage)": {
+              "label": "mapping(bytes => struct BatchCommission.CommissionInfo[])",
+              "numberOfBytes": "32"
+            },
+            "t_struct(CommissionInfo)1234_storage": {
+              "label": "struct BatchCommission.CommissionInfo",
+              "members": [
+                {
+                  "label": "user",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "token",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "balance",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_uint8": {
+              "label": "uint8",
+              "numberOfBytes": "1"
+            },
+            "t_bytes_storage": {
+              "label": "bytes"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "contracts/BatchCommissionV2.sol:BatchCommissionV2": {
+        "src": "contracts/BatchCommissionV2.sol:7",
+        "version": {
+          "withMetadata": "d919a4a37dc66d01df640539d7d50583152eb0904b6da2d69338abc2106b4ba5",
+          "withoutMetadata": "b069add598f72646734769f03e66858849d63b64301a6d2416504ed19d81f484",
+          "linkedWithoutMetadata": "b069add598f72646734769f03e66858849d63b64301a6d2416504ed19d81f484"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "(address)",
+          "depositCommission(bytes,struct BatchCommissionV2.CommissionInfo[])",
+          "distributeCommission(address,bytes)",
+          "destroyAndReturnCommission(bytes)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "BatchCommissionV2",
+            "src": "contracts/BatchCommissionV2.sol:28"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "commissionStorage",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_contract(ICommissionStorag)2444",
+              "contract": "BatchCommissionV2",
+              "src": "contracts/BatchCommissionV2.sol:10"
+            },
+            {
+              "label": "userCommissionInfo",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_address,t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)1704_storage)dyn_storage))",
+              "contract": "BatchCommissionV2",
+              "src": "contracts/BatchCommissionV2.sol:20"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_struct(CommissionInfo)1704_storage)dyn_storage": {
+              "label": "struct BatchCommissionV2.CommissionInfo[]",
+              "numberOfBytes": "32"
+            },
+            "t_bytes_memory_ptr": {
+              "label": "bytes",
+              "numberOfBytes": "32"
+            },
+            "t_contract(ICommissionStorag)2444": {
+              "label": "contract ICommissionStorag",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)1704_storage)dyn_storage))": {
+              "label": "mapping(address => mapping(bytes => struct BatchCommissionV2.CommissionInfo[]))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_bytes_memory_ptr,t_array(t_struct(CommissionInfo)1704_storage)dyn_storage)": {
+              "label": "mapping(bytes => struct BatchCommissionV2.CommissionInfo[])",
+              "numberOfBytes": "32"
+            },
+            "t_struct(CommissionInfo)1704_storage": {
+              "label": "struct BatchCommissionV2.CommissionInfo",
+              "members": [
+                {
+                  "label": "user",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "0"
+                },
+                {
+                  "label": "token",
+                  "type": "t_address",
+                  "offset": 0,
+                  "slot": "1"
+                },
+                {
+                  "label": "balance",
+                  "type": "t_uint256",
+                  "offset": 0,
+                  "slot": "2"
+                }
+              ],
+              "numberOfBytes": "96"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            },
+            "t_bytes_storage": {
+              "label": "bytes"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "contracts/CommissionLogic.sol:CommissionLogic": {
+        "src": "contracts/CommissionLogic.sol:7",
+        "version": {
+          "withMetadata": "7e23924376fb625824d842044b128b3bf73d920bf011aec50734e1082f15fdf5",
+          "withoutMetadata": "31e6123c397f0236a2ee730def918969b2a3699a41ae4e5bd1a8c3e62b5a58fc",
+          "linkedWithoutMetadata": "31e6123c397f0236a2ee730def918969b2a3699a41ae4e5bd1a8c3e62b5a58fc"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "(address)",
+          "execute(bytes,address,struct CommissionLogic.Receiver[])"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "CommissionLogic",
+            "src": "contracts/CommissionLogic.sol:18"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "cs",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_address",
+              "contract": "CommissionLogic",
+              "src": "contracts/CommissionLogic.sol:10"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "contracts/ERC20Mock.sol:ERC20Mock": {
+        "src": "contracts/ERC20Mock.sol:7",
+        "version": {
+          "withMetadata": "afcc00972c17c0c53fb1e1f8086c7e26a7d13c6dabbc214cf409a40bec484b02",
+          "withoutMetadata": "6237f39c1e0d91d0365e89c8d8e21cec6008a3597a4302b21f208c823a26eff6",
+          "linkedWithoutMetadata": "6237f39c1e0d91d0365e89c8d8e21cec6008a3597a4302b21f208c823a26eff6"
+        },
+        "inherit": [
+          "@openzeppelin/contracts/token/ERC20/ERC20.sol:ERC20",
+          "@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol:IERC20Metadata",
+          "@openzeppelin/contracts/token/ERC20/IERC20.sol:IERC20",
+          "@openzeppelin/contracts/utils/Context.sol:Context"
+        ],
+        "libraries": [],
+        "methods": [
+          "(uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [
+          {
+            "kind": "constructor",
+            "contract": "ERC20Mock",
+            "src": "contracts/ERC20Mock.sol:8"
+          }
+        ],
+        "layout": {
+          "storage": [
+            {
+              "label": "_balances",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_mapping(t_address,t_uint256)",
+              "contract": "ERC20",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:39"
+            },
+            {
+              "label": "_allowances",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "ERC20",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:41"
+            },
+            {
+              "label": "_totalSupply",
+              "offset": 0,
+              "slot": "2",
+              "type": "t_uint256",
+              "contract": "ERC20",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:43"
+            },
+            {
+              "label": "_name",
+              "offset": 0,
+              "slot": "3",
+              "type": "t_string_storage",
+              "contract": "ERC20",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:45"
+            },
+            {
+              "label": "_symbol",
+              "offset": 0,
+              "slot": "4",
+              "type": "t_string_storage",
+              "contract": "ERC20",
+              "src": "@openzeppelin/contracts/token/ERC20/ERC20.sol:46"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_string_storage": {
+              "label": "string",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "contracts/ICommissionStorag.sol:ICommissionStorag": {
+        "src": "contracts/ICommissionStorag.sol:5",
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "updateBalance(address,address,uint256)",
+          "getTokenBalances(address)",
+          "hasToken(address,address)",
+          "withdrawEth(uint256)",
+          "withdrawToken(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [],
+          "types": {},
+          "layoutVersion": "1.2",
+          "flat": false,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      },
+      "contracts/commissionStorage.sol:CommissionStorage": {
+        "src": "contracts/commissionStorage.sol:7",
+        "version": {
+          "withMetadata": "dac94d4175362f15438f214ddaf417b269a8a0dac100622afc84510a671143da",
+          "withoutMetadata": "8a931421af53118a9c1859ddc2f607f10a09a1be7b7ddcb4db6fc6884f663bb9",
+          "linkedWithoutMetadata": "8a931421af53118a9c1859ddc2f607f10a09a1be7b7ddcb4db6fc6884f663bb9"
+        },
+        "inherit": [],
+        "libraries": [],
+        "methods": [
+          "updateBalance(address,address,uint256)",
+          "getTokenBalances(address)",
+          "withdrawEth(uint256)",
+          "withdrawToken(address,uint256)"
+        ],
+        "linkReferences": [],
+        "errors": [],
+        "layout": {
+          "storage": [
+            {
+              "label": "balances",
+              "offset": 0,
+              "slot": "0",
+              "type": "t_mapping(t_address,t_mapping(t_address,t_uint256))",
+              "contract": "CommissionStorage",
+              "src": "contracts/commissionStorage.sol:11"
+            },
+            {
+              "label": "tokenList",
+              "offset": 0,
+              "slot": "1",
+              "type": "t_mapping(t_address,t_array(t_address)dyn_storage)",
+              "contract": "CommissionStorage",
+              "src": "contracts/commissionStorage.sol:16"
+            }
+          ],
+          "types": {
+            "t_address": {
+              "label": "address",
+              "numberOfBytes": "20"
+            },
+            "t_array(t_address)dyn_storage": {
+              "label": "address[]",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_array(t_address)dyn_storage)": {
+              "label": "mapping(address => address[])",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_mapping(t_address,t_uint256))": {
+              "label": "mapping(address => mapping(address => uint256))",
+              "numberOfBytes": "32"
+            },
+            "t_mapping(t_address,t_uint256)": {
+              "label": "mapping(address => uint256)",
+              "numberOfBytes": "32"
+            },
+            "t_uint256": {
+              "label": "uint256",
+              "numberOfBytes": "32"
+            }
+          },
+          "layoutVersion": "1.2",
+          "flat": true,
+          "namespaces": {}
+        },
+        "solcVersion": "0.8.2"
+      }
+    }
+  ]
+}
